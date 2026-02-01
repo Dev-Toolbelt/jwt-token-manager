@@ -5,6 +5,8 @@ declare(strict_types=1);
 namespace DevToolbelt\JwtTokenManager;
 
 use DateTimeZone;
+use DevToolbelt\Enums\Locale\Timezone;
+use DevToolbelt\Enums\Security\Algorithm;
 
 final class JwtConfig
 {

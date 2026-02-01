@@ -6,7 +6,7 @@ namespace DevToolbelt\JwtTokenManager\Tests\Unit;
 
 use DateTimeZone;
 use DevToolbelt\JwtTokenManager\Tests\TestCase;
-use DevToolbelt\JwtTokenManager\Timezone;
+use DevToolbelt\Enums\Locale\Timezone;
 
 final class TimezoneTest extends TestCase
 {

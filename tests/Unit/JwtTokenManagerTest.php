@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace DevToolbelt\JwtTokenManager\Tests\Unit;
 
+use DevToolbelt\Enums\Locale\Timezone;
 use DevToolbelt\JwtTokenManager\JwtConfig;
 use DevToolbelt\JwtTokenManager\TokenPayload;
 use DevToolbelt\JwtTokenManager\Tests\TestCase;
-use DevToolbelt\JwtTokenManager\Timezone;
 use DevToolbelt\JwtTokenManager\JwtTokenManager;
 use DevToolbelt\JwtTokenManager\Exceptions\ExpiredTokenException;
 use DevToolbelt\JwtTokenManager\Exceptions\InvalidSignatureException;

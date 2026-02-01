@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace DevToolbelt\JwtTokenManager\Tests\Unit;
 
-use DevToolbelt\JwtTokenManager\Algorithm;
+use DevToolbelt\Enums\Security\Algorithm;
 use DevToolbelt\JwtTokenManager\Tests\TestCase;
 
 final class AlgorithmTest extends TestCase

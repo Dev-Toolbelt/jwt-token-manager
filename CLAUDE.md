@@ -41,9 +41,9 @@ composer phpstan
 
 - **TokenPayload** (`src/TokenPayload.php`) - Immutable wrapper for decoded JWT claims with typed accessors.
 
-- **Algorithm** (`src/Algorithm.php`) - PHP 8.1 enum with 15 algorithms (HMAC, RSA, RSA-PSS, ECDSA, EdDSA). Has helper methods like `isSymmetric()` and `isAsymmetric()`.
+- **Algorithm** (`DevToolbelt\Enums\Security\Algorithm` from `dev-toolbelt/enums`) - PHP 8.1 enum with 15 algorithms (HMAC, RSA, RSA-PSS, ECDSA, EdDSA). Has helper methods like `isSymmetric()` and `isAsymmetric()`.
 
-- **Timezone** (`src/Timezone.php`) - PHP 8.1 enum with all PHP supported timezones. Default is UTC. Has helper methods `toDateTimeZone()`, `getUtcOffset()`, and `getUtcOffsetString()`.
+- **Timezone** (`DevToolbelt\Enums\Locale\Timezone` from `dev-toolbelt/enums`) - PHP 8.1 enum with all PHP supported timezones. Default is UTC. Has helper methods `toDateTimeZone()`, `getUtcOffset()`, and `getUtcOffsetString()`.
 
 ### Exception Hierarchy
 

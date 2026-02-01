@@ -2,8 +2,9 @@
 
 [![Latest Stable Version](https://poser.pugx.org/dev-toolbelt/jwt-token-manager/v/stable)](https://packagist.org/packages/dev-toolbelt/jwt-token-manager)
 [![Total Downloads](https://poser.pugx.org/dev-toolbelt/jwt-token-manager/downloads)](https://packagist.org/packages/dev-toolbelt/jwt-token-manager)
-[![License](https://poser.pugx.org/dev-toolbelt/jwt-token-manager/license)](https://packagist.org/packages/dev-toolbelt/jwt-token-manager)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![PHP Version](https://img.shields.io/badge/php-%3E%3D8.1-8892BF.svg)](https://php.net/)
+[![PHPStan Level](https://img.shields.io/badge/phpstan-level%206-brightgreen.svg)](https://phpstan.org/)
 
 A **framework-agnostic** PHP library for encoding, decoding, and validating JSON Web Tokens (JWT) with support for RSA, HMAC, ECDSA, and EdDSA algorithms.
 
@@ -122,8 +123,8 @@ echo $payload->getClaim('role');  // "admin"
 
 ```php
 use DevToolbelt\JwtTokenManager\JwtConfig;
-use DevToolbelt\JwtTokenManager\Algorithm;
-use DevToolbelt\JwtTokenManager\Timezone;
+use DevToolbelt\Enums\Security\Algorithm;
+use DevToolbelt\Enums\Locale\Timezone;
 
 $config = new JwtConfig(
     privateKey: $privateKey,
@@ -173,7 +174,7 @@ $config = JwtConfig::fromArray([
 > **Why RS256 is the default?** RS256 (RSA with SHA-256) is the most widely adopted algorithm in the industry, offering an excellent balance between security and performance. It uses asymmetric keys, allowing you to share the public key for verification while keeping the private key secure. This makes it ideal for distributed systems and microservices architectures.
 
 ```php
-use DevToolbelt\JwtTokenManager\Algorithm;
+use DevToolbelt\Enums\Security\Algorithm;
 
 // Check algorithm properties
 Algorithm::RS256->isAsymmetric();  // true
@@ -187,7 +188,7 @@ Algorithm::ES256->isECDSA();       // true
 The library provides a type-safe `Timezone` enum with all PHP supported timezones. The default timezone is **UTC**.
 
 ```php
-use DevToolbelt\JwtTokenManager\Timezone;
+use DevToolbelt\Enums\Locale\Timezone;
 
 // Using the enum directly
 $config = new JwtConfig(

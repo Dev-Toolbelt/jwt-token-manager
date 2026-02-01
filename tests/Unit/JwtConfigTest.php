@@ -5,10 +5,10 @@ declare(strict_types=1);
 namespace DevToolbelt\JwtTokenManager\Tests\Unit;
 
 use DateTimeZone;
-use DevToolbelt\JwtTokenManager\Algorithm;
+use DevToolbelt\Enums\Locale\Timezone;
+use DevToolbelt\Enums\Security\Algorithm;
 use DevToolbelt\JwtTokenManager\JwtConfig;
 use DevToolbelt\JwtTokenManager\Tests\TestCase;
-use DevToolbelt\JwtTokenManager\Timezone;
 
 final class JwtConfigTest extends TestCase
 {

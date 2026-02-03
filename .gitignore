@@ -3,6 +3,8 @@
 /composer.lock
 /tests/.phpunit.cache/
 /tests/coverage/
+/tests/coverage.xml
+/tests/coverage-report/
 /.phpunit.result.cache
 composer.phar
 .idea

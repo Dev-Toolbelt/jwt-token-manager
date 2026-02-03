@@ -14,21 +14,12 @@
      xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.5/phpunit.xsd"
      cacheDirectory=".phpunit.cache"
 >
-    <coverage>
-        <report>
-            <html outputDirectory="coverage"/>
-        </report>
-    </coverage>
-
     <testsuites>
         <testsuite name="unit">
             <directory>Unit</directory>
         </testsuite>
+        <testsuite name="integration">
+            <directory>Integration</directory>
+        </testsuite>
     </testsuites>
-
-    <source>
-        <include>
-            <directory suffix=".php">../src</directory>
-        </include>
-    </source>
 </phpunit>

@@ -1,10 +1,11 @@
 # JWT Token Manager
 
+[![CI](https://github.com/dev-toolbelt/jwt-token-manager/actions/workflows/ci.yml/badge.svg)](https://github.com/dev-toolbelt/jwt-token-manager/actions/workflows/ci.yml)
+[![Coverage](https://codecov.io/gh/dev-toolbelt/jwt-token-manager/branch/main/graph/badge.svg)](https://codecov.io/gh/dev-toolbelt/jwt-token-manager)
 [![Latest Stable Version](https://poser.pugx.org/dev-toolbelt/jwt-token-manager/v/stable)](https://packagist.org/packages/dev-toolbelt/jwt-token-manager)
 [![Total Downloads](https://poser.pugx.org/dev-toolbelt/jwt-token-manager/downloads)](https://packagist.org/packages/dev-toolbelt/jwt-token-manager)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![PHP Version](https://img.shields.io/badge/php-%3E%3D8.1-8892BF.svg)](https://php.net/)
-[![PHPStan Level](https://img.shields.io/badge/phpstan-level%206-brightgreen.svg)](https://phpstan.org/)
+[![License](https://poser.pugx.org/dev-toolbelt/jwt-token-manager/license)](https://packagist.org/packages/dev-toolbelt/jwt-token-manager)
+[![PHP Version](https://img.shields.io/packagist/php-v/dev-toolbelt/jwt-token-manager)](https://packagist.org/packages/dev-toolbelt/jwt-token-manager)
 
 A **framework-agnostic** PHP library for encoding, decoding, and validating JSON Web Tokens (JWT) with support for RSA, HMAC, ECDSA, and EdDSA algorithms.
 
@@ -706,9 +707,46 @@ If you discover any security-related issues, please email dersonsena@gmail.com i
 - [Kilderson Sena](https://github.com/dersonsena)
 - [All Contributors](../../contributors)
 
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+Please make sure to update tests as appropriate and follow PSR-12 coding standards.
+
+### Code Quality Requirements
+
+| Check | Tool | Requirement |
+|-------|------|-------------|
+| Tests | PHPUnit | All tests must pass |
+| Coverage | PCOV | Minimum **85%** coverage |
+| Code Style | PHP CodeSniffer | PSR-12 compliant |
+| Static Analysis | PHPStan | Level 6, no errors |
+
+### Pull Request Guidelines
+
+Before submitting a PR, ensure:
+
+1. **All tests pass:** `composer test`
+2. **Coverage is at least 85%:** `composer test:coverage`
+3. **Code style is correct:** `composer phpcs`
+4. **No static analysis errors:** `composer phpstan`
+
+> **Important:** Pull requests with coverage below 85% will be automatically blocked by CI.
+
+### Coverage Report
+
+- **Dashboard:** [Codecov](https://codecov.io/gh/dev-toolbelt/jwt-token-manager)
+- **HTML Report:** [GitHub Pages](https://dev-toolbelt.github.io/jwt-token-manager/)
+
 ## License
 
-The MIT License (MIT). Please see [License File](LICENSE) for more information.
+MIT License. See [LICENSE](LICENSE) for details.
 
 ---
 

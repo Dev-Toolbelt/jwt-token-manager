@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     bootstrap="bootstrap.php"
+     backupGlobals="false"
+     backupStaticProperties="false"
+     colors="true"
+     stopOnFailure="false"
+     testdox="false"
+     beStrictAboutOutputDuringTests="false"
+     failOnRisky="false"
+     failOnWarning="false"
+     executionOrder="defects"
+     cacheResult="false"
+     displayDetailsOnTestsThatTriggerWarnings="false"
+     displayDetailsOnTestsThatTriggerDeprecations="false"
+     displayDetailsOnTestsThatTriggerNotices="false"
+     xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.5/phpunit.xsd"
+     cacheDirectory=".phpunit.cache"
+>
+    <!-- Coverage Configuration optimized for PCOV -->
+    <coverage
+        pathCoverage="false"
+        ignoreDeprecatedCodeUnits="true"
+        disableCodeCoverageIgnore="false"
+    >
+        <report>
+            <clover outputFile="coverage.xml"/>
+            <html outputDirectory="coverage-report" lowUpperBound="50" highLowerBound="90"/>
+            <text outputFile="php://stdout" showOnlySummary="true"/>
+        </report>
+    </coverage>
+
+    <testsuites>
+        <testsuite name="unit">
+            <directory>Unit</directory>
+        </testsuite>
+        <testsuite name="integration">
+            <directory>Integration</directory>
+        </testsuite>
+    </testsuites>
+
+    <source>
+        <include>
+            <directory suffix=".php">../src</directory>
+        </include>
+        <exclude>
+            <directory suffix=".php">../src/Enum</directory>
+            <file>../src/FastCrudServiceProvider.php</file>
+        </exclude>
+    </source>
+
+    <php>
+        <env name="XDEBUG_MODE" value="coverage"/>
+        <ini name="pcov.enabled" value="1"/>
+        <ini name="pcov.directory" value="../src"/>
+        <ini name="memory_limit" value="512M"/>
+        <ini name="error_reporting" value="-1"/>
+    </php>
+</phpunit>

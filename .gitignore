@@ -1,6 +1,5 @@
 /vendor/
 /.php_cs.cache
-/composer.lock
 /tests/.phpunit.cache/
 /tests/coverage/
 /tests/coverage.xml
